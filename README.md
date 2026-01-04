@@ -1,2 +1,2 @@
 # Zetsu-uy1
-des animation python
+des animations et quelques codes html
