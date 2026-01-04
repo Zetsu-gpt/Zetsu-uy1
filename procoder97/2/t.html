@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sharingan Naruto - Animation Réelle</title>
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body>
+        <div class="naruto-text">Mangekyō Sharingan - ARCANE LUNAIRE</div>
+        
+        <div class="box">
+            <div class="eye-box left-eye">
+                <div class="eye circle sharingan1to2">
+                    <div class="eyeball circle center">
+                        <div class="circle"></div>
+                        <div class="circle center"></div>
+                        <div class="sp"><span>●</span></div>
+                        <div class="sp"><span>●</span></div>
+                        <div class="sp"><span>●</span></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="eye-box">
+                <div class="eye circle sharingan1to2">
+                    <div class="eyeball circle center">
+                        <div class="circle"></div>
+                        <div class="circle center"></div>
+                        <div class="sp"><span>●</span></div>
+                        <div class="sp"><span>●</span></div>
+                        <div class="sp"><span>●</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            // Animation de clignement aléatoire plus naturelle
+            function randomBlink() {
+                const eyeBoxes = document.querySelectorAll('.eye-box');
+                const randomEye = eyeBoxes[Math.floor(Math.random() * eyeBoxes.length)];
+                
+                randomEye.style.animation = 'none';
+                setTimeout(() => {
+                    randomEye.style.animation = 'eye-blink 6s ease-in-out infinite';
+                }, 100);
+                
+                // Rappel aléatoire entre 2 et 8 secondes
+                setTimeout(randomBlink, 2000 + Math.random() * 6000);
+            }
+            
+            // Démarrer les clignements aléatoires
+            setTimeout(randomBlink, 3000);
+            
+            // Effet de transformation aléatoire
+            function randomTransformation() {
+                const eyes = document.querySelectorAll('.eye');
+                eyes.forEach(eye => {
+                    eye.style.animation = 'sharingan-transform 4s ease-in-out';
+                    setTimeout(() => {
+                        eye.style.animation = 'sharingan-transform 20s ease-in-out infinite, eye-glow 2s ease-in-out infinite alternate';
+                    }, 4000);
+                });
+                
+                // Rappel aléatoire entre 10 et 20 secondes
+                setTimeout(randomTransformation, 10000 + Math.random() * 10000);
+            }
+            
+            // Démarrer les transformations aléatoires
+            setTimeout(randomTransformation, 8000);
+        </script>
+    </body>
+</html>

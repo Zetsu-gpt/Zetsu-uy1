@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <div class="login">
+            <h2>SIGN IN</h2>
+            <input type="text" placeholder="Username">
+            <input type="text" placeholder="Password">
+
+            <div class="parrafos">
+                <p id="forgot_password">Forgot Password</p>
+                <p id="signup">signup</p>
+            </div>
+            <input id="boton" type="submit" value="LOGIN">
+        </div>
+    </body>
+    <head>
+        <style>
+            body{
+                background: url('galaxy.jpg');
+                background-size: cover;
+                background-position: center;
+                display:flex;
+                justify-content:center;
+                align-items:center;
+                height:100vh;
+                font-family:Arial,sans-serif;
+            }
+            .login{
+                background: rgba(10, 10, 10, 0.8);
+                padding:20px;
+                border-radius:55px;
+                box-shadow: 0 0 22px rgba(129, 165, 108, 0.3);
+                width:300px;
+                height:max-content;
+                text-align:center;
+                display:flex;
+                flex-direction: column;
+            }
+            h2{
+                color:rgb(27, 150, 16);
+                font-weight: 800;
+                font-size:xx-large;
+            }
+            input[type="text"]{
+                margin:10px 0;
+                padding:10px;
+                border:none;
+                border-radius:256px;
+                font-size:16px;
+                background-color: rgba(43, 40, 40, 0.63);
+                box-shadow:0 0 15px rgba(107, 112, 106, 0.2);
+                color:rgb(23, 24, 23);
+            }
+            input[type="text"]::placeholder{
+                color:rgb(255, 255, 255);
+                font-family:'Segeo UI',Tahoma,Geneva,Verdana,sans-serif;
+            }
+            .parrafos{
+                display:flex;
+                justify-content: space-between;
+                color:rgb(7, 236, 103);
+                font-size:medium;
+                margin-bottom:15px;
+            }
+            #signup{
+                color:rgb(23,247,2);
+                cursor:pointer;
+            }
+            #boton{
+                padding:10px;
+                border:none;
+                border-radius:200px;
+                background-color: rgb(23,247,2);
+                color:black;
+                font-weight:700;
+                font-size: large;
+                cursor:pointer;
+            }
+        </style>
+    </head>
+</html>

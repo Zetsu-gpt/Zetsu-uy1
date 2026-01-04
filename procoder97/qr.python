@@ -1,0 +1,33 @@
+import qrcode
+
+# Installer d'abord : pip install qrcode[pil]
+
+# Option 1 : QR code pour appeler un numéro
+qr = qrcode.QRCode()
+qr.add_data("tel:+33612345678")  # Remplacez par votre numéro
+qr.make()
+img = qr.make_image()
+img.save("appel.png")
+
+# Option 2 : QR code pour envoyer un SMS
+qr = qrcode.QRCode()
+qr.add_data("smsto:+33612345678?body=Bonjour")
+qr.make()
+img = qr.make_image()
+img.save("sms.png")
+
+# Option 3 : QR code pour ouvrir une URL
+qr = qrcode.QRCode()
+qr.add_data("https://www.google.com")
+qr.make()
+img = qr.make_image()
+img.save("url.png")
+
+# Option 4 : QR code pour se connecter au WiFi
+qr = qrcode.QRCode()
+qr.add_data("WIFI:T:WPA;S:NomWiFi;P:MotDePasse;;")
+qr.make()
+img = qr.make_image()
+img.save("wifi.png")
+
+print("QR codes créés avec succès !")
